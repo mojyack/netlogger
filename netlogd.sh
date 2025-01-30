@@ -33,7 +33,7 @@ process_rssi() {
 }
 
 while true; do
-    for iface in wlan*; do
+    for iface in wl*; do
         now=$(date +%s)
 
         process_bandwidth $iface
