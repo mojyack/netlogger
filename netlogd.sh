@@ -34,6 +34,10 @@ process_rssi() {
 
 while true; do
     for iface in wl*; do
+        if ! [[ -e $iface ]]; then
+            continue
+        fi
+
         now=$(date +%s)
 
         process_bandwidth $iface
